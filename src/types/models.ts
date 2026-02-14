@@ -64,6 +64,7 @@ export interface NutritionMeal {
 
 export interface DailyPlan {
   day: string
+  dayType?: 'training' | 'conditioning' | 'recovery' | 'rest'
   workout: WorkoutExercise[]
   meals: NutritionMeal[]
   notes: string

@@ -6,6 +6,8 @@ interface PlanStoreState {
   plan: GeneratedPlan | null
   loading: boolean
   generatePlan: (profile: UserProfile) => Promise<GeneratedPlan>
+  setPlan: (plan: GeneratedPlan) => Promise<void>
+  clearPlan: (userId?: string) => Promise<void>
   loadPlan: (userId: string) => Promise<void>
 }
 
@@ -19,6 +21,19 @@ const store = createStore<PlanStoreState>({
     localStorage.setItem(`plan:${profile.uid}`, JSON.stringify(generated))
     store.setState({ plan: generated, loading: false })
     return generated
+  },
+
+  setPlan: async (plan) => {
+    const normalized = normalizeGeneratedPlan(plan)
+    localStorage.setItem(`plan:${normalized.userId}`, JSON.stringify(normalized))
+    store.setState({ plan: normalized })
+  },
+
+  clearPlan: async (userId) => {
+    if (userId) {
+      localStorage.removeItem(`plan:${userId}`)
+    }
+    store.setState({ plan: null })
   },
 
   loadPlan: async (userId) => {
