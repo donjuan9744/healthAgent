@@ -1,0 +1,88 @@
+import type { WorkoutExercise } from '../types/models'
+
+export const workoutLibrary: WorkoutExercise[] = [
+  {
+    id: 'w-pushups',
+    name: 'Push-Ups',
+    description: 'Bodyweight push movement to build chest, shoulders, and triceps.',
+    targetMuscles: ['Chest', 'Shoulders', 'Triceps'],
+    equipment: ['none'],
+    prescription: {
+      type: 'reps',
+      sets: 3,
+      reps: 12,
+    },
+    intensity: 'medium',
+    imageUrl: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'w-squats',
+    name: 'Air Squats',
+    description: 'Lower-body strength movement emphasizing quads and glutes.',
+    targetMuscles: ['Quads', 'Glutes', 'Core'],
+    equipment: ['none'],
+    prescription: {
+      type: 'reps',
+      sets: 3,
+      reps: 15,
+    },
+    intensity: 'medium',
+    imageUrl: 'https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'w-run',
+    name: 'Zone 2 Run',
+    description: 'Steady cardio run to improve aerobic base and endurance.',
+    targetMuscles: ['Cardiovascular', 'Legs'],
+    equipment: ['none'],
+    prescription: {
+      type: 'time',
+      sets: 1,
+      seconds: 1800,
+    },
+    intensity: 'low',
+    imageUrl: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'w-dumbbell-row',
+    name: 'Dumbbell Row',
+    description: 'Pull movement for upper back strength and postural balance.',
+    targetMuscles: ['Lats', 'Rhomboids', 'Biceps'],
+    equipment: ['dumbbells'],
+    prescription: {
+      type: 'reps',
+      sets: 3,
+      reps: 10,
+    },
+    intensity: 'high',
+    imageUrl: 'https://images.unsplash.com/photo-1598971639058-a7f89bc7a8d3?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'w-yoga',
+    name: 'Mobility Yoga Flow',
+    description: 'Light flexibility and recovery flow for mobility and stress relief.',
+    targetMuscles: ['Core', 'Hips', 'Back'],
+    equipment: ['mat'],
+    prescription: {
+      type: 'time',
+      sets: 2,
+      seconds: 600,
+    },
+    intensity: 'low',
+    imageUrl: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'w-hiit',
+    name: 'HIIT Circuit',
+    description: 'Alternating high-intensity intervals for conditioning and calorie burn.',
+    targetMuscles: ['Full Body', 'Cardiovascular'],
+    equipment: ['none'],
+    prescription: {
+      type: 'time',
+      sets: 3,
+      seconds: 360,
+    },
+    intensity: 'high',
+    imageUrl: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80',
+  },
+]
