@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 server/firebase-admin-key.json
 server/.env
-updates.md
+./updates.md
